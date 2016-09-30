@@ -23,4 +23,23 @@ public class PapelMoedaTest {
         assertEquals(p.getValor(),10);
     }
     
+    @Test
+    public void testarQuantidade(){
+        PapelMoeda p = new PapelMoeda(10,1);
+        assertEquals(p.getQuantidade(),1);
+    }
+    
+    @Test
+    public void testarSetValor(){
+        PapelMoeda p = new PapelMoeda(10,1);
+        p.setValor(1);
+        assertEquals(p.getValor(),1);
+    }
+    
+    @Test 
+    public void testarSetQuantidade(){
+        PapelMoeda p = new PapelMoeda(10,5);
+        p.setQuantidade(1);
+        assertEquals(p.getQuantidade(),1);
+    }
 }

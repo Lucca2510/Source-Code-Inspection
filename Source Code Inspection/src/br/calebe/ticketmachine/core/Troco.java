@@ -6,12 +6,12 @@ import java.util.Iterator;
  *
  * @author Calebe de Paula Bianchini
  */
-class Troco {
+public class Troco {
 
     protected PapelMoeda[] papeisMoeda;
 
     public Troco(int valor) {
-        papeisMoeda = new PapelMoeda[6];
+        papeisMoeda = new PapelMoeda[5];
         int count = 0;
         while (valor % 100 != 0) {
             count++;
@@ -47,6 +47,12 @@ class Troco {
     public Iterator<PapelMoeda> getIterator() {
         return new TrocoIterator(this);
     }
+
+    public PapelMoeda[] getPapeisMoeda() {
+        return papeisMoeda;
+    }
+    
+    
 
     class TrocoIterator implements Iterator<PapelMoeda> {
 
